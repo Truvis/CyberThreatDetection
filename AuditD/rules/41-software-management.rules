@@ -1,0 +1,56 @@
+# RPM (Redhat/CentOS)
+-w /usr/bin/rpm -p x -k software_mgmt
+-w /usr/bin/yum -p x -k software_mgmt
+
+# DNF (Fedora/RedHat 8/CentOS 8)
+-w /usr/bin/dnf -p x -k software_mgmt
+
+# YAST/Zypper/RPM (SuSE)
+-w /sbin/yast -p x -k software_mgmt
+-w /sbin/yast2 -p x -k software_mgmt
+-w /bin/rpm -p x -k software_mgmt
+-w /usr/bin/zypper -k software_mgmt
+
+# DPKG / APT-GET (Debian/Ubuntu)
+-w /usr/bin/dpkg -p x -k software_mgmt
+-w /usr/bin/apt -p x -k software_mgmt
+-w /usr/bin/apt-add-repository -p x -k software_mgmt
+-w /usr/bin/apt-get -p x -k software_mgmt
+-w /usr/bin/aptitude -p x -k software_mgmt
+-w /usr/bin/wajig -p x -k software_mgmt
+-w /usr/bin/snap -p x -k software_mgmt
+
+# PIP(3) (Python installs)
+-w /usr/bin/pip -p x -k T1072_third_party_software
+-w /usr/local/bin/pip -p x -k T1072_third_party_software
+-w /usr/bin/pip3 -p x -k T1072_third_party_software
+-w /usr/local/bin/pip3 -p x -k T1072_third_party_software
+-w /usr/bin/pipx -p x -k T1072_third_party_software
+-w /usr/local/bin/pipx -p x -k T1072_third_party_software
+
+# npm
+## T1072 third party software
+## https://www.npmjs.com
+## https://docs.npmjs.com/cli/v6/commands/npm-audit
+-w /usr/bin/npm -p x -k T1072_third_party_software
+
+# Comprehensive Perl Archive Network (CPAN) (CPAN installs)
+## T1072 third party software
+## https://www.cpan.org
+-w /usr/bin/cpan -p x -k T1072_third_party_software
+
+# Ruby (RubyGems installs)
+## T1072 third party software
+## https://rubygems.org
+-w /usr/bin/gem -p x -k T1072_third_party_software
+
+# LuaRocks (Lua installs)
+## T1072 third party software
+## https://luarocks.org
+-w /usr/bin/luarocks -p x -k T1072_third_party_software
+
+# Pacman (Arch Linux)
+## https://wiki.archlinux.org/title/Pacman
+## T1072 third party software
+-w /etc/pacman.conf -p x -k T1072_third_party_software
+-w /etc/pacman.d -p x -k T1072_third_party_software

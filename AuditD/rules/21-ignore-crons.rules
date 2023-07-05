@@ -1,0 +1,8 @@
+## This is for don't audit rules. We put these early because audit
+### is a first match wins system. Uncomment the rules you want.
+
+## Cron jobs fill the logs with stuff we normally don't want
+#-a never,user -F subj_type=crond_t
+
+## This prevents chrony from overwhelming the logs
+#-a never,exit -F arch=x86_64 -S adjtimex -F auid=unset -F uid=chrony -F subj_type=chronyd_t
